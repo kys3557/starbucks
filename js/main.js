@@ -1,20 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = document.querySelector('input');
-
-searchEl.addEventListener('click', function () {
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-});
-
 const badgeEl = document.querySelector('header .badges')
 const toTopEl = document.querySelector('#to-top')
 // 페이지에 스크롤 이벤트를 추가!
@@ -153,5 +136,3 @@ spyEls.forEach(function(spyEl){
   .addTo(new ScrollMagic.Controller());
 });
 
-const thisYear= document.querySelector('.this-year');
-thisYear.textContent= new Date().getFullYear(); //2021숫자 출력
